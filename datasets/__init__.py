@@ -1,0 +1,2 @@
+from datasets.satimage2_dataset import Satimage2Dataset
+from datasets.mammography_dataset import MammographyDataset
