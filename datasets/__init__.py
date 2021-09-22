@@ -1,2 +1,3 @@
-from datasets.satimage2_dataset import Satimage2Dataset
-from datasets.mammography_dataset import MammographyDataset
+from datasets.satimage2 import Satimage2Dataset
+from datasets.mammography import MammographyDataset
+from datasets.cifar10 import Cifar10

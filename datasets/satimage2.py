@@ -1,17 +1,20 @@
 from torch.utils.data import Dataset
 from pathlib import Path
+import pickle
+
 import config
-import scipy.io
 
 
-class MammographyDataset(Dataset):
+class Satimage2Dataset(Dataset):
     r"""
-    http://odds.cs.stonybrook.edu/mammography-dataset/
+    http://odds.cs.stonybrook.edu/satimage-2-dataset/
     """
 
     def __init__(self, data_path: Path = config.DATA_PATH):
-        mat = scipy.io.loadmat(str(data_path / 'mammography.mat'))
-        self.vectors, self.labels = mat['X'], mat['y']
+
+        with open(data_path / 'satimage2', 'rb') as data_file:
+            data = pickle.load(data_file)
+            self.vectors, self.labels = data['vectors'], data['labels'].reshape(-1)
 
     def __len(self):
         return self.labels.shape[0]
