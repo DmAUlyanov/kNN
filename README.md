@@ -5,7 +5,7 @@
     - Average precision
     - F1-score
     - Confusion matrix
-- Для датасетов Satimage-2 и Cifar10 (аномальный класс 'airplane') выполнить следующее:
+- Для датасетов Satimage-2 и Cifar10 (аномальный класс 'airplane', тестовая выборка) выполнить следующее:
     - Визуализировать данные. Можно уменьшить размерность с помощью TSNE (Не для Cifar10)
     - Найти k дающий лучший average precision, построить precision-recall кривую
     - Найти лучший F1-score, построить confusion matrix для данного порога
